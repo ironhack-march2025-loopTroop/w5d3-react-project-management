@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import { API_URL } from "../config/api"
 
@@ -29,10 +30,11 @@ function ProjectListPage() {
 
             {projects.map((projectObj) => {
                 return (
-                    <div className="card" key={projectObj.id}>
-                        <h3>{projectObj.title}</h3>
-                        <p>{projectObj.description}</p>
-                    </div>
+                    <Link to={`/projects/${projectObj.id}`} key={projectObj.id}>
+                        <div className="card">
+                            <h3>{projectObj.title}</h3>
+                        </div>
+                    </Link>
                 )
             })}
         </div>
