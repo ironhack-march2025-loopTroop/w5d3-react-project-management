@@ -7,11 +7,12 @@
 body {
   margin: 0;
   text-align: center;
+  color: #222;
 }
 
 a {
   list-style: none;
-  color: black;
+  color: #222;
 }
 
 button,
@@ -118,3 +119,4 @@ textarea {
     flex: 0 1 33%;
   }
 }
+
