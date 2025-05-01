@@ -60,16 +60,17 @@ function ProjectDetailsPage() {
                     </div>)
             })}
 
+            <div>
+                <Link to="/projects">
+                    <button>Back to projects</button>
+                </Link>
 
-            <Link to="/projects">
-                <button>Back to projects</button>
-            </Link>
+                <Link to={`/projects/edit/${project.id}`}>
+                    <button>Edit</button>
+                </Link>
 
-            <Link to={`/projects/edit/${project.id}`}>
-                <button>Edit</button>
-            </Link>
-
-            <button onClick={deleteProject}>Delete</button>
+                <button onClick={deleteProject}>Delete</button>
+            </div>
 
         </div>
     );

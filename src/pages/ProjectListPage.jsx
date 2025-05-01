@@ -28,15 +28,17 @@ function ProjectListPage() {
         <div>
             <h1>Number of projects: {projects.length}</h1>
 
-            {projects.map((projectObj) => {
-                return (
-                    <Link to={`/projects/${projectObj.id}`} key={projectObj.id}>
-                        <div className="card">
-                            <h3>{projectObj.title}</h3>
-                        </div>
-                    </Link>
-                )
-            })}
+            <div className="card-list">
+                {projects.map((projectObj) => {
+                    return (
+                        <Link className="card" to={`/projects/${projectObj.id}`} key={projectObj.id}>
+                            <div>
+                                <h3>{projectObj.title}</h3>
+                            </div>
+                        </Link>
+                    )
+                })}
+            </div>
         </div>
     );
 }
